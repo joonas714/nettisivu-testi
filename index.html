@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testisivu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            min-height: 100vh;
+            padding: 30px 40px;
+        }
+
+        /* Logo / otsikko */
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .logo img {
+            display: block;
+        }
+
+        /* Bannerikuva */
+        .banner {
+            width: 100%;
+            height: 360px;
+            overflow: hidden;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Navigointipalkki */
+        .nav {
+            background: #1e6fbf;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 16px 32px;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            margin-bottom: 32px;
+        }
+
+        .nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: opacity 0.2s;
+            flex: 1;
+            text-align: center;
+        }
+
+        .nav a:hover {
+            opacity: 0.75;
+        }
+
+        /* Sisältö */
+        .content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            padding: 0 8px 32px;
+        }
+
+        .main h2 {
+            font-size: 1.4rem;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+        }
+
+        .main p {
+            margin-bottom: 14px;
+            color: #444;
+        }
+
+        .info-box {
+            background: #f3f0ea;
+            border-radius: 12px;
+            padding: 24px 28px;
+            font-size: 0.95rem;
+        }
+
+        .info-box h3 {
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .info-box p {
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .info-box .spacer {
+            height: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .page {
+                padding: 20px;
+            }
+            .banner {
+                height: 220px;
+            }
+            .nav {
+                flex-wrap: wrap;
+                gap: 12px;
+                padding: 14px 12px;
+            }
+            .nav a {
+                flex: 1 1 40%;
+                font-size: 0.85rem;
+            }
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="logo.png" alt="Sähkötekniikka Näkki Oy">
+        </div>
+
+        <!-- Bannerikuva -->
+        <div class="banner">
+            <img src="banner.jpg" alt="Bannerikuva">
+        </div>
+
+        <!-- Navigointi -->
+        <nav class="nav">
+            <a href="#etusivu">Etusivu</a>
+            <a href="#palvelut">Palvelut</a>
+            <a href="#referenssit">Referenssit</a>
+            <a href="#yhteystiedot">Yhteystiedot</a>
+        </nav>
+
+        <!-- Sisältö -->
+        <div class="content">
+            <div class="main">
+                <h2>Tervetuloa</h2>
+                <p>
+                    Tämä on yksinkertainen suomenkielinen testisivu, joka noudattaa
+                    samanlaista rakennetta kuin annettu esimerkkisivu: ylhäällä logo,
+                    sen alla iso bannerikuva ja kuvan alla sininen navigointipalkki.
+                </p>
+                <p>
+                    Voit muokata sisältöä, vaihtaa kuvaa ja lisätä omia linkkejä
+                    navigointipalkkiin tarpeesi mukaan.
+                </p>
+            </div>
+
+            <aside class="info-box">
+                <h3>Yhteystiedot</h3>
+                <p>Testiyritys Oy</p>
+                <p>Esimerkkikatu 1</p>
+                <p>00100 Helsinki</p>
+                <div class="spacer"></div>
+                <h3>Yhteyshenkilö</h3>
+                <p>Puh. 040 123 4567</p>
+                <p>info@testisivu.fi</p>
+            </aside>
+        </div>
+    </div>
+</body>
+</html>
